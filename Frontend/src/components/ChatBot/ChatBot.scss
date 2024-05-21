@@ -1,0 +1,154 @@
+@import "../../assets/variables.scss";
+
+.main-container-bot {
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.chatbot-container {
+    // background-color: white;
+    // height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    .chatbot-messages {
+        position: absolute;
+        bottom: 100px;
+        width: 100%;
+        max-height: 100dvh;
+        overflow-y: scroll;
+        padding: 2rem;
+        .user {
+
+            justify-content: flex-end;
+            display: flex;
+
+            span {
+                background-color: rgb(50, 1, 93);
+                color: white;
+                border-radius: 10px;
+                border-top-right-radius: 0;
+                padding: 1rem;
+                margin: 0.5rem 3rem;
+                max-width: 35vw;
+            }
+        }
+
+        .bot {
+
+            align-self: flex-start;
+            display: flex;
+
+            span {
+                background-color: rgb(255, 230, 141);
+                padding: 1rem;
+                border-radius: 10px;
+                border-top-left-radius: 0;
+                margin: 0.5rem 3rem;
+                max-width: 35vw;
+            }
+
+        }
+
+    }
+
+
+    .chatbot-input {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        padding: 0 3rem;
+
+        #user-input {
+            width: 70vw;
+            height: 60px;
+            border-radius: 10px;
+            border: 0 solid;
+            background-color: rgb(235, 236, 237);
+            font-size: 1rem;
+            padding: 0 20px;
+            display: inline-block;
+            box-shadow: 0 0 5px 1px rgb(180, 180, 180);
+        }
+
+        #user-input:focus {
+            outline: none;
+        }
+
+        button {
+            height: 60px;
+            border: 0;
+            background-color: rgb(24, 24, 24);
+            color: white;
+            width: 120px;
+            border-radius: 10px;
+            display: inline-block;
+            cursor: pointer;
+            box-shadow: 0 0 5px 2px rgb(86, 86, 86);
+        }
+
+        button:active {
+            box-shadow: 0 0 5px 2px rgb(146, 146, 146);
+            background-color: black;
+        }
+    }
+}
+
+
+.bot-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+
+    .bot {
+        height: 200px;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    p {
+        font-family: "poppins";
+        font-weight: 600;
+        color:rgb(17, 172, 166);
+        font-size: 2rem;
+        text-align: center;
+    }
+    .bot-text {
+        .details-container {
+            .tagline {
+                font-size: 1rem;
+                font-weight: 1000;
+                color: $black;
+                font-family: "Poppins", sans-serif;
+                text-align:center;
+                span {
+                 
+                    font-family: "Poppins", sans-serif;
+                }
+            .text    {
+                font-size: 2rem;
+                color: #4158d0;      
+            }
+            .textName{
+                font-size: 2rem;
+                color: #c21d70 ; 
+            }
+            .text-description{
+                font-size: 1rem;
+                color: #4158d0; 
+                // color: rgba(138, 122, 244, 1); 
+            }
+        }
+    }
+    }
+}

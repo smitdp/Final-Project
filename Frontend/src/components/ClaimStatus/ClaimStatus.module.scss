@@ -1,0 +1,88 @@
+@import '../../assets/variables.scss';
+
+.track {
+  background: rgba(255, 255, 255, 0.459);
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+  backdrop-filter: blur(2px);
+
+}
+
+.edit {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
+
+.steps-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @media(max-width: 1000px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.step {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+  font-weight: 800;
+  z-index: 1;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   right: -40px;
+  //   transform: translateY(-50%);
+  //   width: 40%;
+  //   height: 10px;
+  //   background: $light5;
+  //   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  //   z-index: 0;
+  // }
+
+  &:nth-child(6) {
+    &::after {
+      display: none;
+
+
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 10px;
+    background: $light5;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    z-index: 0;
+
+
+
+
+   
+  }
+}
+
+.hideArrow {
+  display: none;
+}
